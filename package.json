@@ -1,17 +1,32 @@
 {
   "name": "projeto_primeira_api",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.ts",
   "repository": "https://github.com/devpabloh/projeto_primeira_api.git",
   "author": "Pablo Henrique <pablohenriqueadm94@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
+    "@types/node": "^24.3.0",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import-helpers": "^2.0.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.6.2",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.41.0"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "dotenv": "^17.2.1",
+    "eslint-plugin-import": "^2.32.0",
+    "express": "^5.1.0"
   }
 }
