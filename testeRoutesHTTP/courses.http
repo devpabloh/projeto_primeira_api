@@ -1,0 +1,8 @@
+### 
+POST http://localhost:3333/categories
+Content-Type: application/json
+
+{
+    "name": "Pablo Henrique",
+    "description": "caralho de asa trepidante"
+}

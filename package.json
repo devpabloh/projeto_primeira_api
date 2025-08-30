@@ -7,7 +7,7 @@
   "author": "Pablo Henrique <pablohenriqueadm94@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch --inspect src/server.ts"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
@@ -25,8 +25,10 @@
   },
   "dependencies": {
     "@types/express": "^5.0.3",
+    "@types/uuid": "^10.0.0",
     "dotenv": "^17.2.1",
     "eslint-plugin-import": "^2.32.0",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "uuid": "^11.1.0"
   }
 }

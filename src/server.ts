@@ -1,6 +1,8 @@
 import dotenv from "dotenv";
 import express from "express";
 
+import { categoriesRoutes } from "./routes/categories.routes.js";
+
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;
@@ -8,15 +10,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(express.json());
 
-app.get("/", (request, response) => {
-  return response.json({ message: "está rodando" });
-});
-
-app.post("/courses", (request, response) => {
-  const { name } = request.body;
-
-  return response.json({ name });
-});
+app.use("/categories",categoriesRoutes)
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
