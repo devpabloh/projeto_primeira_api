@@ -1,6 +1,6 @@
 import { Category } from "../model/category.js"
 
-interface ICreateCategoryDTO{
+interface ICreateCategoryDTO {
     name: string,
     description: string,
     
@@ -8,6 +8,7 @@ interface ICreateCategoryDTO{
 
 class CategoriesRepository{
     private categories: Category[];
+    
     constructor(){
         this.categories = []
     }

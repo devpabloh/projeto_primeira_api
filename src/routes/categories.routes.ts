@@ -4,6 +4,8 @@ import { Category } from "../model/category.js";
 
 const categoriesRoutes = Router();
 
+const categories: Category[] = [] 
+
 categoriesRoutes.post("/", (request, response)=>{
     const {name, description} = request.body;
 
