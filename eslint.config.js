@@ -7,7 +7,7 @@ import importHelpers from "eslint-plugin-import-helpers";
 
 export default tseslint.config(
   {
-    ignores: ["node_modules", "dist", "*.js"],
+    ignores: ["node_modules", "dist"],
   },
 
   eslintJS.configs.recommended,
@@ -29,6 +29,15 @@ export default tseslint.config(
   },
   {
     files: ["**/*.ts", "**/*.tsx"],
+    languageOptions:{
+      parser: tseslint.parser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        project: true, 
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
     rules: {
       camelcase: "off",
       "import/no-unresolved": "error",
