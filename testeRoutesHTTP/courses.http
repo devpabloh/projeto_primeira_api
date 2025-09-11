@@ -10,3 +10,12 @@ Content-Type: application/json
 ###
 GET http://localhost:3333/categories
 Content-Type: application/json
+
+### 
+POST http://localhost:3333/specifications
+Content-Type: application/json
+
+{
+    "name": "Pablo Henrique",
+    "description": "Etâ Porrá!"
+}
