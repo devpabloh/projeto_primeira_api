@@ -1,10 +1,8 @@
-import {Request, Response} from 'express'
+import type {Request, Response} from 'express'
 import { CreateCategoryUseCase } from './CreateCategoryUseCase.js';
 
 class CreateCategoryController {
-    constructor(private createCategoryUseCase: CreateCategoryUseCase){
-
-        }
+    constructor(private createCategoryUseCase: CreateCategoryUseCase){} 
 
     handle(request: Request, response: Response): Response{
 
