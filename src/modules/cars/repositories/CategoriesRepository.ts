@@ -1,13 +1,23 @@
 import { Category } from "../model/Category.js"
-import type { ICategoriesRepository } from "../repositories/ICategoriesRepository.js";
+import type { ICategoriesRepository, ICreateCategoryDTO } from "../repositories/ICategoriesRepository.js"
 
 
 
 class CategoriesRepository implements ICategoriesRepository{
     private categories: Category[];
+
+    private static INSTANCE: CategoriesRepository
     
-    constructor(){
+    private constructor(){
         this.categories = []
+    }
+
+    public static getInstance(): CategoriesRepository{
+        if(!CategoriesRepository.INSTANCE){
+            CategoriesRepository.INSTANCE = new CategoriesRepository()
+        }
+
+        return CategoriesRepository.INSTANCE;
     }
 
     create({name, description}:ICreateCategoryDTO): void{
