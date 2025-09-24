@@ -8,11 +8,16 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "NodeNext",
-    "target": "es2022",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+    "target": "es2020",
     "types": ["node"],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    },
     // For nodejs:
     // "lib": ["esnext"],
-    // "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
@@ -40,5 +45,7 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
