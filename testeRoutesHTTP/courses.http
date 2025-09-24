@@ -19,3 +19,8 @@ Content-Type: application/json
     "name": "Pablo Henrique",
     "description": "Etâ Porrá!"
 }
+
+###
+POST http://localhost:333/categories/import
+Content-Type: multipart/form-data
+@file=file; filename="../"
