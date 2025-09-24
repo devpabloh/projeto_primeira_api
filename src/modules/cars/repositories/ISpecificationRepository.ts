@@ -12,4 +12,4 @@ interface ISpecificationRepository{
     findByname(name: string): Specification;
 }
 
-export {ISpecificationRepository, ICreateSpecificationDTO}
+export type { ICreateSpecificationDTO, ISpecificationRepository };
