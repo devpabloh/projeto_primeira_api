@@ -1,4 +1,5 @@
 import type {Request, Response} from 'express'
+
 import { CreateCategoryUseCase } from './CreateCategoryUseCase.js';
 
 class CreateCategoryController {
