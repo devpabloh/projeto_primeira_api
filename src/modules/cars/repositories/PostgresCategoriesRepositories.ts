@@ -1,13 +1,13 @@
-import type { Category } from "../modules/cars/model/Category.js";
-import {ICategoriesRepository, type ICreateCategoryDTO} from "./ICategoriesRepository.ts"
+import type { Category } from "../model/Category";
+import type { ICategoriesRepository, ICreateCategoryDTO } from "../repositories/ICategoriesRepository"
 
 class PostgresCategoriesRepository implements ICategoriesRepository{
-    findByName(name: string): Category {
+    findByName(name: string): Category | null {
         console.log(name)
         return null
     }
     list(): Category[] {
-        return null
+        return [];
     }
     create({description,name}: ICreateCategoryDTO): void {
         console.log(name, description)
