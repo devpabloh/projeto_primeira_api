@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add csvparse
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @tyoes/swagger-ui-express -D
 
 PATH: 
   C:\Program Files\PowerShell\7;C:\Program Files\Java\jdk-24\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Java\zulu17.58.21-ca-jdk17.0.15-win_x64\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;c:\Users\devpa\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\PowerShell\7-preview\preview;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PowerShell\7\;C:\Users\devpa\.console-ninja\.bin;C:\Program Files (x86)\Microsoft\Edge\Application;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\Git\cmd;C:\Program Files\PowerShell\7\;C:\Program Files\PowerShell\7-preview\preview;C:\Users\devpa\AppData\Local\Microsoft\WindowsApps;C:\Users\devpa\AppData\Local\Programs\Microsoft VS Code\bin;C:\ProgramData\devpa\GitHubDesktop\bin;C:\Users\devp;C:\Program Files (x86)\PostgreSQL\Npgsql\bin;C:\Program Files (x86)\PostgreSQL\pgJDBC;C:\Program Files\PostgreSQL\17\bin;C:\Users\devpa\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.1.1.1\bin;;C:\Users\devpa\AppData\Roaming\npm;c:\Users\devpa\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand
@@ -28,6 +28,7 @@ npm manifest:
     },
     "devDependencies": {
       "@eslint/js": "^9.34.0",
+      "@types/csv-parse": "^1.2.5",
       "@types/multer": "^2.0.0",
       "@types/node": "^24.3.0",
       "eslint": "^9.34.0",
@@ -44,10 +45,12 @@ npm manifest:
     "dependencies": {
       "@types/express": "^5.0.3",
       "@types/uuid": "^10.0.0",
+      "csv-parse": "^6.1.0",
       "dotenv": "^17.2.1",
       "eslint-plugin-import": "^2.32.0",
       "express": "^5.1.0",
       "multer": "^2.0.2",
+      "swagger-ui-express": "^5.0.1",
       "uuid": "^11.1.0"
     }
   }
@@ -314,6 +317,10 @@ Lockfile:
     version "1.1.0"
     resolved "https://registry.npmjs.org/@rtsao/scc/-/scc-1.1.0.tgz"
   
+  "@scarf/scarf@=1.4.0":
+    version "1.4.0"
+    resolved "https://registry.yarnpkg.com/@scarf/scarf/-/scarf-1.4.0.tgz#3bbb984085dbd6d982494538b523be1ce6562972"
+  
   "@tsconfig/node10@^1.0.7":
     version "1.0.11"
     resolved "https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.11.tgz"
@@ -348,6 +355,12 @@ Lockfile:
     resolved "https://registry.npmjs.org/@types/connect/-/connect-3.4.38.tgz"
     dependencies:
       "@types/node" "*"
+  
+  "@types/csv-parse@^1.2.5":
+    version "1.2.5"
+    resolved "https://registry.yarnpkg.com/@types/csv-parse/-/csv-parse-1.2.5.tgz#56004bd3248ace0e4a1fe3cb06cb507e9599b21c"
+    dependencies:
+      csv-parse "*"
   
   "@types/estree@^1.0.6":
     version "1.0.8"
@@ -881,6 +894,10 @@ Lockfile:
       path-key "^3.1.0"
       shebang-command "^2.0.0"
       which "^2.0.1"
+  
+  csv-parse@*, csv-parse@^6.1.0:
+    version "6.1.0"
+    resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-6.1.0.tgz#c642ec5b7fc57c1f477a07d179beb5ff0dfd5ed0"
   
   data-view-buffer@^1.0.2:
     version "1.0.2"
@@ -2415,6 +2432,18 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   
+  swagger-ui-dist@>=5.0.0:
+    version "5.29.0"
+    resolved "https://registry.yarnpkg.com/swagger-ui-dist/-/swagger-ui-dist-5.29.0.tgz#ae4949fbc547f09c4eb6223354bd7ab47e6d3b21"
+    dependencies:
+      "@scarf/scarf" "=1.4.0"
+  
+  swagger-ui-express@^5.0.1:
+    version "5.0.1"
+    resolved "https://registry.yarnpkg.com/swagger-ui-express/-/swagger-ui-express-5.0.1.tgz#fb8c1b781d2793a6bd2f8a205a3f4bd6fa020dd8"
+    dependencies:
+      swagger-ui-dist ">=5.0.0"
+  
   tinyglobby@^0.2.14:
     version "0.2.14"
     resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.14.tgz"
@@ -2724,7 +2753,7 @@ Lockfile:
     resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
 
 Trace: 
-  Error: https://registry.yarnpkg.com/csvparse: Not found
+  Error: https://registry.yarnpkg.com/@tyoes%2fswagger-ui-express: Not found
       at params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:62098:18)
       at self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:123085:22)
       at Request.emit (node:events:507:28)
